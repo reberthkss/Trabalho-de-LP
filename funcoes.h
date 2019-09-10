@@ -3,6 +3,9 @@
 
 #include <stdio.h>
 #include <math.h>
+#include <stdlib.h>
+
+
 
 extern int assentoC[23];
 extern int assentoJ[23];
@@ -18,7 +21,9 @@ int menuprincipal()
 {
 
     int opt=0;
-    printf("\t\t     MENU PRINCIPAL\n\n");
+
+    system("COLOR 02");
+    printf("\t\t\t\ MENU PRINCIPAL \n\n");
     printf("\t\t 1 - COMPRAR ASSENTO\n");
     printf("\t\t 2 - VERIFICAR ASSENTOS\n");
     printf("\t\t 3 - VER MAPA DO TRAJETO\n");
@@ -26,7 +31,8 @@ int menuprincipal()
     printf("\t\t 5 - SAIR\n");
 
     printf("\t\t Digite uma opcao: ");
-    scanf("%i",&opt);
+
+    opt=getch
 
     return opt;
 
