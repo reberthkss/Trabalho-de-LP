@@ -1,0 +1,17 @@
+# depslib dependency file v1.0
+1568371166 source:c:\users\rodrigo\desktop\trabalholp\main.c
+	<stdio.h>
+	<math.h>
+	<string.h>
+	"funcoes.h"
+
+1568371453 c:\users\rodrigo\desktop\trabalholp\funcoes.h
+	<stdio.h>
+	<math.h>
+	<stdlib.h>
+
+1568371648 source:c:\users\rodrigo\desktop\trabalholp\funcoes.c
+	<stdio.h>
+	<math.h>
+	<stdlib.h>
+
