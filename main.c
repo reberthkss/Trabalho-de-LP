@@ -7,7 +7,7 @@
 
 int assentoC[23];
 int assentoJ[23];
-float valort=0;
+
 
 
 
@@ -23,7 +23,7 @@ int i=0;
 while(!gameover){
 // MENU PRINCIPAL
 // -- func menuprincipal()
-acao(opt=menuprincipal(),&gameover);
+acao(menuprincipal(),&gameover);
 }
 
 

@@ -9,7 +9,7 @@
 
 extern int assentoC[23];
 extern int assentoJ[23];
-extern float valort;
+extern float valort=0;
 
 
 
@@ -93,7 +93,7 @@ while(!menu){
         // exit()
     case 5:
             *gameover=1;
-            return *gameover;
+            return;
         break;
     }
 }
@@ -115,26 +115,24 @@ char* posicao(int pos)
 
 void efetCompra(int pos,int destino){
 
-    int i;
-    int opt=0;
-    int qt=0;
-    int ass[23];
-    int confirma=0;
-    int cont=0;
+    int i,opt=0,qt=0,ass[23],confirma=0,cont=0,aux=1;;
     float valor1=28.0,valor2=159.0,valor3=188.0;
 
 
-
-printf("[%s] Quantos assentos?:",posicao(pos));
+                    do{
+                    printf("[%s] Quantos assentos?:",posicao(pos));
 
                     scanf("%i",&qt);
 
+                    if(qt<1 || qt > 23)
+                    {
+                        printf("Por Favor! DIGITE A QUANTIDADE DE ASSENTOS ENTRE 1 E 23\n");
+                    } else {
+                    aux--;}
+                    }while(aux==1);
                     printf("\n");
 
                     printf("[%s] Qual/Quais assento?: ",posicao(pos));
-
-
-
 
                     for(i=0;i<qt;i++){
 
@@ -167,6 +165,7 @@ printf("[%s] Quantos assentos?:",posicao(pos));
 
                     printf("\t\t     RESUMO\n");
                     printf("Posicao: %s \n",posicao(pos));
+
                     for(i=0;i<qt;i++){
                     printf("Bilhete: %i.\t Assento: %i\n",i+1,ass[i]);
                     }
@@ -193,6 +192,8 @@ printf("[%s] Quantos assentos?:",posicao(pos));
                                 break;
                             }
                         }
+
+                        printf("\nVENDA REALIZADA COM SUCESSO!!!!\n");
                     }else
                     {
                         printf("VENDA NAO EFETUADA! VOLTANDO AO MENU PRINCIPAL...");
